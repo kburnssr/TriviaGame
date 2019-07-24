@@ -6,36 +6,58 @@
   box-sizing: border-box;
 }
 
-body {  
-  background-image: url(../images/background.png);
-  font-family: 'Times', 'Times New Roman', Helvetica, sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-/*  padding: 5px 5px;*/
-  color: #ffffff;
+html, body { 
+  position: relative;
+  font-family: 'Ravie', 'Times New Roman', Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
   margin: 0;
-  float: left;
-  margin: 5px;
+  padding: 0;
+  font-size: 40;
+} 
+#logo{
+  position: sticky;
+  text-align: center;
+  display: inline-block;
+  padding: 20px;
+  margin-left: 0;
+  text-decoration: none;
+  background-color: #ffff99;
+  color: blue;
+  font-size: 40px;
+  font-family: 'Ravie';
+  top: 0;
+  right: 0px;
+  width: 860px;
+ }
+#background{
+    position: absolute;
+    height: 960px;
+    width: 960px;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(../images/ArtDeco3.jpg);
+    background-position: center center;  
+    background-size: cover;
+    background-repeat: repeat;
+  }
+
+#buttons {
+  position: absolute;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+  width: 860px;
+  font-family: "Arial";
+  display: inline-block;
+  background-color: #ffff99;
+  color: black;
 }
-/* {
-  background-color: #ff6000;
-  border-bottom: 1px solid #9999;
-  padding: 20 12;
-}
-/*
-header div {
-  max-width: 960px;
-  margin: 0 auto;
+.response{
+  font-size: 50%;
 }
 
-*/
-#logo{
-  padding: 12px 0px;
-  text-decoration: none;
-  background-color: #ff6000;
-  color: #fff;
-  box-sizing: border-box;
-}
+/*
 h1{
   margin-top: 5px;
   padding-top: 0px;
@@ -45,30 +67,7 @@ h1{
   height: 100px;
   width: 200px;
 }
-#instructions{
-  position: relative;
-  margin-top: 18px;
-  margin-left: 0px;
-  margin-bottom: 0px;
-  padding: 5px;
-  background-color: beige;
-  color: green;
-  font-size: 50%;
-  width: 300px;
-  height: 300px;
-}
-#randNumToMatch {
-  position: relative;
-  float: left;
-  margin-top: 5px;
-  padding-top: 5px;
-  padding-bottom: 0px;
-  max-width: 300px; 
-  color: black;
-  font-size: 36pxs;
-  height: 100px;
-  background-color: green;
-}
+*/
 #wins {
   position: relative;
   float: left;
@@ -95,68 +94,5 @@ h1{
   color: black;
   font-size: 50%;
 }
-/*
-img{
-   position: relative;
-   margin-top:  5px;
-   margin-left: 0px;
-   height: 50;
-}
-*/
-#images{
-  margin-top: 87px;
-  height: 87;
-  max-height: 50;
-}
-#score-title{
-  margin-left:  0px;
-  padding-top: 10px;
-  padding-left: 10px;
-  margin-bottom: 0;
-  background-color: teal;
-  color: white;
-  height: 30px;
-  font-size: 50%;
-}
-
-#yourTotalScore {
-  position: relative;
-  padding: 10px;
-  padding-bottom: 50px;
-  margin-top: 4px;
-  background-color: teal;
-  color: white;
-}
-/*.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
- }
-  /*
-section img {
-  float: left;
-  margin-ri ht: 20px;
-}
-footer {
-  text-align: center;
-  border-top: 4px solid #393;
-  background-color: #333;
-  color: #ccc;
-  padding: 8px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  }   
-@media(max-width: 640px){
-
-}
-@media(max-width: 768px){
-
-}
-@media(max-width: 980px){
-
-}
-*/
-
 
 

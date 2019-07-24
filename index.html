@@ -7,96 +7,207 @@
     <title>Unit-4-Game</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
-    <!--       CrystalsCollector!-->
-    <a href="index.html" id="logo">CrystalCollector!</a>
+    <!--       Trivia Game   -->
 </head>
 
 <body>
-
-    <div id="instructions">
-        <p>You will be given a random number at the start of the game</p><br>
-        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
-            total score.</p><br>
-        <p>You win the game by matching your total score to the random number. You lose the game if your total score
-            goes above the random number</p><br>
-        <p>The value of each crystal is hidden from you until you click on it.</p><br>
-        <p>Each time when the game starts, the game will change the values of each crystal.</p><br><br>
-    </div>
-
-    <!--<h1 id="randNumToMatch" class = "clearfix"></h1>-->
-    <h1 id="randNumToMatch"></h1>
-    <div id="wins">
-        Wins:<span id="wins-value"></span>
-    </div>
-    <div id="losses">
-        Losses:<span id="losses-value"></span>
-    </div>
-    <br>
-    <div id="images">
-        <button class="button" id="red"><img src="./assets/images/red.png"></button>
-        <button class="button" id="blue"><img src="./assets/images/blue.png"></button>
-        <button class="button" id="yellow"><img src="./assets/images/yellow.png"></button>
-        <button class="button" id="green"><img src="./assets/images/green.png"></button>
+    <div id="background"></div>
+    <div id="window">
+        <!--     <div id="instructions">
+                <p>You will be given 8 questions to answer</p><br>
+                <p>You will 30 seconds to select the correct answer after you click the START button</p><br>
+                <p>You can select only one answer from the 4 multiple choice answers</p><br>
+                <p>The number of correct answers will be displayed at the end of the time period</p><br>
+        </div>-->
         <br>
-    </div>
-    <div id="score-title">
-        Your total score =
-    </div>
-    <div id="yourTotalScore"></div>
 
+        <br>
+        <br>
+        <div id="buttons">
+            <br>
+            <br>
+            <h1 id="logo">
+                Totally Trivial Trivia!
+            </h1>
+            <br>
+            <button id="start">START</button>
+            <br>
+            <br>
+            <br>
+            <form id="question">
+                <div id="timer">
+                    <br>
+                    Time Remaining:
+                </div>
+                <br>
+                <br>
+                What is the highest recorded jump by a kangaroo in a single leap?
+                <br>
+                <div class="response">
+                    <input type="radio" name="answer1" value="10 feet"> 10 feet
+                    <input type="radio" name="answer1" value="20 feet"> 20 feet
+                    <input type="radio" name="answer1" value="30 feet"> 30 feet
+                    <input type="radio" name="answer1" value="40 feet"> 40 feet
+                </div>
+                <br>
+                <br>
+                <br>
+                What is the longest movie ever made?<br>
+                <div class="response">
+                    <input type="radio" name="answer2" value="35,600 minutes"> 35,600 minutes
+                    <input type="radio" name="answer2" value="51,420 minutes"> 51,420 minutes
+                    <input type="radio" name="answer2" value="37,560 minutes"> 37,560 minutes
+                    <input type="radio" name="answer2" value="25,432 minutes"> 25,432 minutes
+                </div>
+                <br>
+                <br>
+                <br>
+                Epiretinal membrane (ERM) affects which organ?<br>
+                <div class="response">
+                    <input type="radio" name="answer3" value="Eyes"> Eyes
+                    <input type="radio" name="answer3" value="Lungs"> Lungs
+                    <input type="radio" name="answer3" value="Kidneys"> Kidneys
+                    <input type="radio" name="answer3" value="Liver"> Liver
+                </div>
+                <br>
+                <br>
+                <br>
+                Of the four types of malaria, which is the most deadly?<br>
+                <div class="response">
+                    <br>
+                    <input type="radio" name="answer4" value="Plasmodium vivax"> Plasmodium vivax
+                    <input type="radio" name="answer4" value="Plasmodium faciparum"> Plasmodium faciparum
+                    <input type="radio" name="answer4" value="Plasmodium ovale"> Plasmodium ovale
+                    <input type="radio" name="answer4" value="Plasmodium malariae"> Plasmodium malariae
+                </div>
+                <br>
+                <br>
+                <br>
+                Which cells are situated only within the nervous system?<br>
+                <div class="response">
+                    <input type="radio" name="answer5" value="Neurons"> Neurons
+                    <input type="radio" name="answer5" value="White cells"> White cells
+                    <input type="radio" name="answer5" value="Red cells"> Red cells
+                    <input type="radio" name="answer5" value="Lymphosites"> Lymphosites
+                </div>
+                <br>
+                <br>
+                <br>
+                Which country has beaver as the national emblem?<br>
+                <div class="response">
+                    <input type="radio" name="answer6" value="Turkey"> Turkey
+                    <input type="radio" name="answer6" value="Peru"> Peru
+                    <input type="radio" name="answer6" value="Canada"> Canada
+                    <input type="radio" name="answer6" value="Mexico"> Mexico
+                </div>
+                <br>
+                <br>
+                <br>
+                Which vegetable was considered poisonous in Medieval times but was used by the Romans as an aphrodisiac?
+                <br>
+                <div class="response">
+                    <input type="radio" name="answer7" value="Tomato"> Tomato
+                    <input type="radio" name="answer7" value="Potato"> Potato
+                    <input type="radio" name="answer7" value="Asparagas"> Asparagas
+                    <input type="radio" name="answer7" value="Broccolli"> Broccolli
+                </div>
+                <br>
+                <br>
+                <br>
+                Which nut is used to make dynamite?<br>
+                <div class="response">
+                    <label for="answer8-1">
+                        <input type="radio" id="answer8-1" name="answer8" value="Peanut"> Peanut
+                    </label>
+                    <input type="radio" name="answer8" value="Brazil nut"> Brazil nut
+                    <input type="radio" name="answer8" value="Pecan nut"> Pecan nut
+                    <input type="radio" name="answer8" value="Coconut"> Coconut
+                </div>
+                <br>
+                <br>
+                <br>
+                <button id="end">END</button>
+                <br>
+                <br>
+                <br>
+
+        </form>
+
+        <div id="results">
+            <div id="correct">
+                Correct Answers:<span id="correct-value"></span>
+            </div>
+            <div id="incorrect">
+                Incorrect Answers:<span id="incorrect-value"></span>
+            </div>
+            <br>
+        </div>
+    </div>
+    </div>
     <!-- Added link to the jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
+        var correctAnswer = {
+            "answer1": "30 feet",
+            "answer2": "51,420 minutes",
+            "answer3": "Eyes",
+            "answer4": "Plasmodium malariae",
+            "answer5": "Neurons",
+            "answer6": "Canada",
+            "answer7": "Tomato",
+            "answer8": "Peanut"
+        }
+        $("#question").hide();
+        $("#results").hide();
+        var counter = 30;
+        var timeout;
+        $('#timer').html('Time remaining = ' + counter);
 
-        /*Start of game*/
-        var wins = 0;
-        var losses = 0;
-        var yourTotalScore = 0;
-        var n = 0;
-        var crystalVal = {
-            "red": 0,
-            "blue": 0,
-            "yellow": 0,
-            "green" : 0
-        };
-        var init = function(){
-            n = Math.floor(Math.random() * (121 - 19) + 19);
-            $('#randNumToMatch').text(n);
-            yourTotalScore = 0;
-            for(var k in crystalVal){
-                crystalVal[k] = Math.ceil(Math.random()*19)
+        function decreaseCounter() {
+            counter--;
+            $('#timer').html("Time remaining = " + counter);
+            if (counter <= 0) {
+                $("#end").click();
             }
-        };
-        init();
-        $('#wins-value').text(wins);
-        $('#losses-value').text(losses);
-        $('#randNumToMatch').text(n);
-        $("#yourTotalScore").text(yourTotalScore);
-        $('button').on('mousedown', function (e) {
-            var button = $(e.target).parent()[0]; 
-            yourTotalScore += crystalVal[button.id];
-            if (yourTotalScore == n) {
-                wins = wins + 1;
-                $('#wins-value').text(wins);
-                init();
-            } else if (yourTotalScore > n) {
-                losses = losses + 1;
-                $('#losses-value').text(losses);
-                init();
-            }
-            $("#yourTotalScore").text(yourTotalScore);
+        }
+
+        $('#end').on('click', function (e) {
+            e.preventDefault();
+            clearInterval(timeOut);
+            checkEntries();
+            $("#question").hide();
+            $("#results").show();
         })
-/*                var type = $(this).attr('data-type'));*/
+
+        $('#start').on('click', function () {
+            $("#question").show();
+            timeOut = setInterval(decreaseCounter, 1 * 1000);
+            $("#start").hide();
+        })
+        function checkEntries() {
+            var incorrect = 8;
+            var correct = 0;
+            var responses = $("form").serializeArray();
+            for (var i = 0; i < responses.length; i++) {
+                var response = responses[i];
+                if (correctAnswer[response.name] == response.value) {
+                    correct++;
+                    incorrect--;
+                }
+            }
+            console.log('correct = ' + correct, 'incorrect = ' + incorrect);
+            $("#correct-value").text(correct);
+            $("#incorrect-value").text(incorrect);
+
+            //       take values of each radio button
+            //       compare the values to correct answer
+            //       correct answer score by 1
+            //       incorrect answer score by 1
+            //       print number of correct and incorrect to the screen
+        }
+
+        /*                var type = $(this).attr('data-type'));*/
     </script>
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-
-        </script>
-
 </body>
 
 </html>
